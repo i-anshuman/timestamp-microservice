@@ -1,0 +1,31 @@
+{
+  "name": "timestamp-microservice",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp APIs and Microservices Projects - Timestamp Microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-anshuman/fcc-timestamp-microservice.git"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "Microservice",
+    "API"
+  ],
+  "author": "Anshuman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/i-anshuman/fcc-timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/i-anshuman/fcc-timestamp-microservice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
