@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static(__dirname + "/assets/"));
+
 app.get('/api/timestamp', (req, res) => {
   res.json({
     unix: new Date().getTime(),
     utc: new Date().toUTCString()
   });
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get('/api/timestamp/:date_string', (req, res) => {

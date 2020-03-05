@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Slab', serif;
+	font-size: 16px;
+	background-color: #222222;
+	color: #f7ecec;
+	line-height: 1.8rem;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  padding: 2px;
+  background-color: #464646;
+  color: #00ffff
+}
+
+main {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+}
+
+section {
+  border-top: 2px solid crimson;
+}
+
+h1 {
+  font-size: 2rem;
+  text-decoration: wavy underline #dc143c;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+	color: #5ec9f3;
+}
+
+a:hover {
+  color: #37a4ec;
+}
+
+a:visited {
+  color: #a646eb
+}
+
+footer {
+  border-top: 2px solid crimson;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > p:last-of-type {
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
