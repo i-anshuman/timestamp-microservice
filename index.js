@@ -3,15 +3,15 @@ const app = express();
 
 app.use(express.static(__dirname + "/assets/"));
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + "/views/index.html");
+});
+
 app.get('/api/timestamp', (req, res) => {
   res.json({
     unix: new Date().getTime(),
     utc: new Date().toUTCString()
   });
-});
-
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get('/api/timestamp/:date_string', (req, res) => {
@@ -28,14 +28,14 @@ app.get('/api/timestamp/:date_string', (req, res) => {
   else {
     const date = new Date(date_string);
     // Check if the date is a valid date object.
-    if (date instanceof Date && !isNaN(date)) {
+    if (date.toString() === "Invalid Date") {
+      res.json({error: "Invalid Date"});
+    }
+    else {
       res.json({
         unix: date.getTime(),
         utc: date.toUTCString()
       });
-    }
-    else {
-      res.json({error: "Invalid Date"});
     }
   }
 });
